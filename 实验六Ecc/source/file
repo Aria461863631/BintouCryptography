@@ -1,0 +1,55 @@
+Lower and upper bounds on group order: [ 225 , 289 ]
+Computing group order using PARI
+... group order =  288
+
+Q =  (a^7 + a^4 : a^6 + a^5 + a^4 + a^3 + a^2 + a : 1) : Order(Q) =  48
+Case 1: n1 may increase
+Replacing first  generator by  (a^7 + a^4 : a^6 + a^5 + a^4 + a^3 + a^2 + a : 1)  of order 48 , gaining index  48
+Subgroup order now  48 = 48 * 1
+Generators: P1 =  (a^7 + a^4 : a^6 + a^5 + a^4 + a^3 + a^2 + a : 1)  of order  48, P2 =  (0 : 1 : 0)  of order  1
+Subgroup order is now  48 = 48 * 1
+
+Q =  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1) : Order(Q) =  96
+Case 1: n1 may increase
+Replacing first  generator by  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1)  of order 96 , gaining index  2
+Subgroup order now  96 = 96 * 1
+Generators: P1 =  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1)  of order  96, P2 =  (0 : 1 : 0)  of order  1
+Subgroup order is now  96 = 96 * 1
+Q =  (a^6 + a^2 : a^7 + a^6 + a^4 + a^2 + a : 1) : Order(Q) =  16
+Generators: P1 =  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1)  of order  96, P2 =  (0 : 1 : 0)  of order  1
+Subgroup order is now  96 = 96 * 1
+Q =  (a^7 + a^6 + a^5 + a^3 + a^2 + a + 1 : a^7 + a^5 + a^4 + a^2 + a + 1 : 1) : Order(Q) =  96
+Generators: P1 =  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1)  of order  96, P2 =  (0 : 1 : 0)  of order  1
+Subgroup order is now  96 = 96 * 1
+Q =  (a^7 + a^6 + a^4 + a^3 + a^2 : a^5 + a^4 + a : 1) : Order(Q) =  3
+Generators: P1 =  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1)  of order  96, P2 =  (0 : 1 : 0)  of order  1
+Subgroup order is now  96 = 96 * 1
+Q =  (a^7 + a^4 + a^3 + a^2 + 1 : a^7 + a^6 + a^5 + a^4 + a^3 + a^2 + a : 1) : Order(Q) =  48
+Generators: P1 =  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1)  of order  96, P2 =  (0 : 1 : 0)  of order  1
+Subgroup order is now  96 = 96 * 1
+Q =  (a^7 + a^6 + a^5 + a^4 + 1 : a^7 + a^6 + a^4 + a^2 + 1 : 1) : Order(Q) =  96
+Generators: P1 =  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1)  of order  96, P2 =  (0 : 1 : 0)  of order  1
+Subgroup order is now  96 = 96 * 1
+Q =  (a^6 + a^5 + a^4 : a^6 + a^5 + a^3 + 1 : 1) : Order(Q) =  96
+Generators: P1 =  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1)  of order  96, P2 =  (0 : 1 : 0)  of order  1
+Subgroup order is now  96 = 96 * 1
+Q =  (a^4 + a + 1 : a^4 + a^3 + a^2 : 1) : Order(Q) =  48
+Generators: P1 =  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1)  of order  96, P2 =  (0 : 1 : 0)  of order  1
+Subgroup order is now  96 = 96 * 1
+
+Q =  (a^5 + a^4 + a^3 + a + 1 : a^6 + a^4 + 1 : 1) : Order(Q) =  32
+Case 2: n2 may increase
+n1a= 32
+linear relation gives m= 1 , a= 0
+Generators: P1 =  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1)  of order  96, P2 =  (0 : 1 : 0)  of order  1
+Subgroup order is now  96 = 96 * 1
+
+Q =  (a^6 + a^5 + a^4 + a^2 + a + 1 : a^7 + a^6 + a^5 + a^4 + a^2 + a + 1 : 1) : Order(Q) =  96
+Case 2: n2 may increase
+n1a= 32
+linear relation gives m= 3 , a= 0
+Adding second generator  (a^6 + a^2 + 1 : a^7 + a^5 + a^3 + a^2 + a + 1 : 1)  of order  3
+Subgroup order now  288 = 96 * 3
+Generators: P1 =  (a^6 + a^5 + a^3 + a + 1 : a^7 + a^5 + a^4 + 1 : 1)  of order  96, P2 =  (a^6 + a^2 + 1 : a^7 + a^5 + a^3 + a^2 + a + 1 : 1)  of order  3
+Subgroup order is now  288 = 96 * 3
+Additive abelian group isomorphic to Z/96 + Z/3 embedded in Abelian group of points on Elliptic Curve defined by y^2 + x*y = x^3 + 1 over Finite Field in a of size 2^8
