@@ -15,9 +15,17 @@ def gcd_iter(a, b):
 
 ### 2. 根据老师给出的代码（或者自己写代码）验证EGCD算法的正确性。 
 
-<p align="center"><img alt="$$&#10;\begin{aligned} &#10;ax + by &amp; = gcd(b, a \% b) \\ &#10;&amp; = bx^{'} + (a\%b)y^{'} \\&#10;&amp; = bx^{'} + ( a - \lfloor\frac{a}{b}\rfloor b)y^{'} \\&#10;&amp; = bx^{'} + ay^{'} - \lfloor\frac{a}{b}\rfloor by^{'} \\&#10;&amp; = ay^{'} + b( x^{'} - \lfloor\frac{a}{b}\rfloor y^{'})&#10;\end{aligned}&#10;$$" src="https://rawgit.com/Aria461863631/BintouCryptography/master/svgs/aa07f970f15bf8b34d430969a458386d.svg" align="middle" width="214.2531831pt" height="155.2026531pt"/></p>
+$$
+\begin{aligned} 
+ax + by & = gcd(b, a \% b) \\ 
+& = bx^{'} + (a\%b)y^{'} \\
+& = bx^{'} + ( a - \lfloor\frac{a}{b}\rfloor b)y^{'} \\
+& = bx^{'} + ay^{'} - \lfloor\frac{a}{b}\rfloor by^{'} \\
+& = ay^{'} + b( x^{'} - \lfloor\frac{a}{b}\rfloor y^{'})
+\end{aligned}
+$$
 
-so <img alt="$ x = y^{'} $" src="https://rawgit.com/Aria461863631/BintouCryptography/master/svgs/89077be2a772977e2fdcf295e28b3a41.svg" align="middle" width="43.586286149999985pt" height="30.984656999999984pt"/> and <img alt="$ y =  x^{'} - \lfloor\frac{a}{b}\rfloor y^{'} $" src="https://rawgit.com/Aria461863631/BintouCryptography/master/svgs/4c860ef21692580db09dbfa523005752.svg" align="middle" width="103.28246279999998pt" height="30.984656999999984pt"/>
+so $ x = y^{'} $ and $ y =  x^{'} - \lfloor\frac{a}{b}\rfloor y^{'} $
 
 ```python
 # solve ax + by = gcd(a,b)
@@ -100,9 +108,9 @@ def inverse (a, n):
 
 //bzoj2219 51nod1123
 
-求解 <img alt="$ x^A = B ( mod \  P ) $" src="https://rawgit.com/Aria461863631/BintouCryptography/master/svgs/3d461a1186df5a480f5a107a07190c6a.svg" align="middle" width="117.37259324999998pt" height="27.6567522pt"/> P为任意数
+求解 $ x^A = B ( mod \  P ) $ P为任意数
 
-1. 根据**中国剩余定理:** <img alt="$ a  \leftrightarrow  ( a_1, a_2, .. a_k ) $" src="https://rawgit.com/Aria461863631/BintouCryptography/master/svgs/f0c482ce0c4c2f240ccc2a265aefd906.svg" align="middle" width="119.69372744999998pt" height="24.65753399999998pt"/> where <img alt="$ a_i = a \ mod \ p_i $" src="https://rawgit.com/Aria461863631/BintouCryptography/master/svgs/6f3f34089e0cd5a07f3b548ef99012ff.svg" align="middle" width="99.6062034pt" height="22.831056599999986pt"/> 有双射关系
+1. 根据**中国剩余定理:** $ a  \leftrightarrow  ( a_1, a_2, .. a_k ) $ where $ a_i = a \ mod \ p_i $ 有双射关系
 
    则可以把P分解成$p_1^{c1}p_2^{c2}...p_k^{ck} $
 
@@ -110,9 +118,9 @@ def inverse (a, n):
 
    最后在用中国剩余定理求解同余方程组的解,即模P下的解
 
-**于是问题变成了求 <img alt="$ x^A≡B(mod \ p^c) $" src="https://rawgit.com/Aria461863631/BintouCryptography/master/svgs/c66640b9cb7cd79b31fa875c6dd1e561.svg" align="middle" width="97.58532629999998pt" height="27.6567522pt"/>的解**
+**于是问题变成了求 $ x^A≡B(mod \ p^c) $的解**
 
-1. p为偶数,即p有 <img alt="$ 2^k $" src="https://rawgit.com/Aria461863631/BintouCryptography/master/svgs/18d85b1e2966836b9b30410374656839.svg" align="middle" width="15.48523844999999pt" height="27.91243950000002pt"/> 为因子
+1. p为偶数,即p有 $ 2^k $ 为因子
 
    - 考虑到 $ x^A≡B(mod \ 2^k) $ 的充要条件是 $ x^A≡B(mod \ 2^{k−1}) $ 。
    - 反过来，如果 $ x^A≡B(mod \ 2^{i−1}) $，那么只可能导致  $ x^A≡B(mod \ 2^i) $ 或 $ (x+2i−1)^A≡B(mod\ 2^i) $
