@@ -23,3 +23,45 @@
 - 每个点都求一遍阶
 - 根据a,b不同有很多曲线没有生成元的
 
+---
+
+怎么用
+
+- 所有二进制数字都会和sage一样转换为多项式的形式
+
+加减&数乘法
+
+```c
+int a = 0, b = 1;
+EllipticCurve256 E = EllipticCurve256 ( a, b );
+
+/*
+ * point plus
+ */
+int x1, y1, x2, y2;
+x1 = 2, y1 = 48, x2 = 25, y2 = 3;
+EC256 P = EC256 ( x1, y1, a, b );
+EC256 Q = EC256 ( x2, y2, a, b );
+EC256 sol = P + Q;
+sol = P-Q;
+sol = 3*Q;
+cout << sol << endl;
+```
+
+没写header的zz.jpg
+
+- pointorder_bsgs: 求点阶
+- cardinality_bsgs: 求群阶
+- abelian_group: 求生成元
+
+```c
+int a = 0, b = 1;
+EllipticCurve256 E = EllipticCurve256 ( a, b );
+
+E.pointorder_bsgs();
+```
+
+
+
+
+

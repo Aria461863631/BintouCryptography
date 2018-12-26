@@ -15,6 +15,7 @@ def gcd_iter(a, b):
 
 ### 2. 根据老师给出的代码（或者自己写代码）验证EGCD算法的正确性。 
 
+
 $$
 \begin{aligned} 
 ax + by & = gcd(b, a \% b) \\ 

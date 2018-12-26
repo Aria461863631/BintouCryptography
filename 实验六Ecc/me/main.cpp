@@ -1,7 +1,7 @@
 #include "EC256.cpp"
 #include <fstream>
 
-void Failed () {
+void Singular () {
     for ( int i = 0; i < 256; ++i )
         for ( int j = 0; j < 256; ++j ) {
             GF256 a1 = GF256 ( 1 );
@@ -46,12 +46,18 @@ void correct_generator () {
 }
 
 int main () {
+    int a = 0, b = 1;
+    EllipticCurve256 E = EllipticCurve256 ( a, b );
+
     /*
-      int i = 0, j = 1;
-      EllipticCurve256 E = EllipticCurve256 ( i, j );
-      E.abelian_group ();
-    */
-    correct_generator ();
+     * point plus
+     */
+    int x1, y1, x2, y2;
+    x1 = 2, y1 = 48, x2 = 25, y2 = 3;
+    EC256 P = EC256 ( x1, y1, a, b );
+    EC256 Q = EC256 ( x2, y2, a, b );
+    EC256 sol = P - Q;
+    cout << sol << endl;
 
     return 0;
 }
